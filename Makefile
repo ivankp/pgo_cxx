@@ -2,7 +2,6 @@ INCFLAGS := -Iinclude
 CXXFLAGS := -Wall -g $(INCFLAGS)
 
 EXE := $(patsubst src/%.cc,%,$(wildcard src/*.cc))
-# DEP := $(patsubst %,.%.d,$(EXE))
 DEP := $(EXE:%=.%.d)
 
 ROOT_CFLAGS := $(shell root-config --cflags)

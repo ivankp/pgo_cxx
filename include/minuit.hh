@@ -30,6 +30,8 @@ public:
     return p;
   }
 
+  inline void clear() { mncler(); }
+
   using TMinuit::SetPrintLevel;
   using TMinuit::DefineParameter;
   using TMinuit::Migrad;
