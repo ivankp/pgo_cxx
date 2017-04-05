@@ -1,6 +1,9 @@
+#include <TCollection.h>
+#include <TF1.h>
 #include <TFile.h>
 #include <TH1D.h>
 #include <TObject.h>
+#include <TROOT.h>
 #include <iostream>
 #include <string>
 
@@ -29,5 +32,11 @@ int main() {
     TFile same_file(file_name.c_str());
     same_file.cd(dir_name.c_str());
     same_file.ls();
+    std::cout << std::endl;
+    
+    new TF1("owned_by_gROOT", "x^2");
+    for (const auto& o : *gROOT->GetListOfFunctions())
+        std::cout << o->GetName() << std::endl;
+    std::cout << std::endl;
 
 }
