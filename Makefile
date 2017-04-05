@@ -11,8 +11,8 @@ ROOT_LIBS   := $(shell root-config --libs)
 NODEPS := clean
 .PHONY: all clean
 
-C_hist_max := $(ROOT_CFLAGS)
-L_hist_max := $(ROOT_LIBS)
+C_lambda := $(ROOT_CFLAGS)
+L_lambda := $(ROOT_LIBS)
 
 C_minuit := $(ROOT_CFLAGS)
 L_minuit := $(ROOT_LIBS) -lMinuit
