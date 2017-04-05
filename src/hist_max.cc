@@ -24,9 +24,9 @@ int main() {
     
     // The good part.  Find the maximum of the histograms' maxima in a single
     // statement.
-    const auto max_max = 1.1 * (
+    auto max_max = 1.1 * (
         *std::max_element(
-            hists.cbegin(), hists.cend(), [](const auto x, const auto y) {
+            hists.cbegin(), hists.cend(), [](auto x, auto y) {
                 return x->GetMaximum() < y->GetMaximum();
             }
         )
