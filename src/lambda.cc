@@ -36,7 +36,7 @@ int main() {
         hists[i]->SetMaximum(max_max);
         TCanvas canvas;
         hists[i]->Draw();
-        canvas.SaveAs(cat(names[i], ".pdf").c_str());
+        canvas.SaveAs(cat("gauss_", names[i], ".pdf").c_str());
     }
 
 }

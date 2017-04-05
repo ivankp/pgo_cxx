@@ -20,6 +20,9 @@ L_minuit := $(ROOT_LIBS) -lMinuit
 C_root_ownership := $(ROOT_CFLAGS)
 L_root_ownership := $(ROOT_LIBS)
 
+C_smart_ptrs := $(ROOT_CFLAGS)
+L_smart_ptrs := $(ROOT_LIBS)
+
 all: $(EXE)
 
 #Don't create dependencies when cleaning
