@@ -2,6 +2,7 @@ INCFLAGS := -Iinclude
 CXXFLAGS := -Wall -g $(INCFLAGS)
 
 EXE := $(patsubst src/%.cc,%,$(wildcard src/*.cc))
+# DEP := $(patsubst %,.%.d,$(EXE))
 DEP := $(EXE:%=.%.d)
 
 ROOT_CFLAGS := $(shell root-config --cflags)
@@ -10,8 +11,17 @@ ROOT_LIBS   := $(shell root-config --libs)
 NODEPS := clean
 .PHONY: all clean
 
+C_lambda := $(ROOT_CFLAGS)
+L_lambda := $(ROOT_LIBS)
+
 C_minuit := $(ROOT_CFLAGS)
 L_minuit := $(ROOT_LIBS) -lMinuit
+
+C_root_ownership := $(ROOT_CFLAGS)
+L_root_ownership := $(ROOT_LIBS)
+
+C_smart_ptrs := $(ROOT_CFLAGS)
+L_smart_ptrs := $(ROOT_LIBS)
 
 all: $(EXE)
 
