@@ -22,9 +22,6 @@ int main() {
         hists[i]->FillRandom("gaus", 1000);
     }
     
-    // The good part.  Find the maximum of the histograms' maxima in a single
-    // statement.  In old-timey C++, you'd have to go define a comparison
-    // function somewhere else instead of doing it inline.
     auto max_max = 1.1 * (
         *std::max_element(
             hists.cbegin(), hists.cend(), [](auto x, auto y) {
