@@ -8,8 +8,8 @@
 
 int main() {
 
-    std::random_device device;
-    std::mt19937 engine(device());
+    // std::random_device device;
+    std::mt19937 engine(std::random_device{}());
     std::uniform_real_distribution<double> dist;
 
     TH1::AddDirectory(false);

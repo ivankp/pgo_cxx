@@ -23,6 +23,11 @@ L_root_ownership := $(ROOT_LIBS)
 C_smart_ptrs := $(ROOT_CFLAGS)
 L_smart_ptrs := $(ROOT_LIBS)
 
+C_analysis := $(ROOT_CFLAGS)
+L_analysis := $(ROOT_LIBS) -lTreePlayer
+
+C_cat17 := -std=c++1z
+
 all: $(EXE)
 
 #Don't create dependencies when cleaning
