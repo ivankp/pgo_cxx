@@ -4,5 +4,6 @@
 !Makefile
 !include/
 !src/
+!slides.pdf
 
 **.swp
